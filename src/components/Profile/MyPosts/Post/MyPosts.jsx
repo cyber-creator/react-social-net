@@ -6,13 +6,13 @@ import {updateNewPostTextActionCreator, addPostActionCreator } from "../../../..
 
 
 const MyPosts = (props) => {
-	let postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}  />);
-	
+	let postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
+
 	let newPostElement = React.createRef();  /* special read method */
 
 		let addPost = () => {
 			props.dispatch(addPostActionCreator());
-		}
+		};
 
 
 
@@ -51,7 +51,7 @@ const MyPosts = (props) => {
 		      		{postsElements}
 
 		     </div>
-	         
+
 	    </div>
 
 
