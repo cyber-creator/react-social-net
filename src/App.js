@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Profile from './components/Profile/Profile.jsx';
 import Dialogs from './components/Dialogs/Dialogs.jsx';
 import {BrowserRouter, Route} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props) => {
@@ -27,9 +28,8 @@ const App = (props) => {
 		  			  	<Route path='/profile' component={Profile} />*/}
 		  	{/*<Profile />*/}
 		  	{/*<Dialogs />* Route package installed with npm i react-router-dom -save */}
-		  	<Route path='/dialogs' render={() => <Dialogs store={props.store} /> } />  
-		  	<Route path='/profile' render={() => <Profile profilePage={props.state.profilePage}
-			   dispatch={props.dispatch}/> } />
+		  	<Route path='/dialogs' render={() => <DialogsContainer store={props.store} /> } />
+		  	<Route path='/profile' render={() => <Profile store={props.store} /> } />
 		  </div>
 
 		</div>

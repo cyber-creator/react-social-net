@@ -17,10 +17,6 @@ let rerenderEntireTree = (state) => {
 };
 
 
-
-
-
-
 rerenderEntireTree(store.getState());
 
 
